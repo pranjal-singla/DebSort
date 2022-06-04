@@ -14,7 +14,8 @@
 
 ## 💻 Tech Stack used
 - **MySQL** - We have used MySQL to create a database, store data, edit/update/delete
-- **Flask** - We have used Flask which is a python library to integrate the front-end with MySQ
+- **Flask** - We have used Flask which is a python library to integrate the front-end with MySQL
+- **HTML, CSS, JavaScript** - Created beautiful UI using these languages
 
 ## ✨ Features
 - **Login** - Allows users to Log In
