@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='/view.css')}}">
+</head>
+<body>
+    <main>
+        <div class="box">
+            <div class="inner-box">
+                <div class="view-records">
+                    <div class="logo">
+                        <img src="{{url_for('static', filename ='images for main page/logo.png')}}" alt="logo">
+                        <h2>DebSort</h2>
+                    </div>
+                    {% if message %}
+                    <table id="display">
+                        <tr class="row">
+                            {% for col in cols %}
+                                <td class="data">{{col}}</td>
+                            {% endfor %}
+                        </tr>
+                        {% for record in message%}
+                            <tr class="row">
+                            {% for rec in record %}
+                                <td class="data">{{rec}}</td>
+                            {% endfor %}
+                            </tr>
+                        {% endfor %}
+                    </table>
+                {% endif %}
+                <form method="POST" action={{src}}>
+                    <input type="submit" name="choice" value="Back" class="submit">
+                </form>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

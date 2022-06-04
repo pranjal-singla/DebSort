@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap'); 
+
+/* Reset */
+*, *::before, *::after{
+  padding:0;
+  margin:0;
+  box-sizing: border-box;
+}
+
+body, input{
+  font-family: 'Poppins', sans-serif;
+}
+
+main{
+    width:100%;
+    min-height: 100vh;
+    overflow: hidden;
+    background-color: #ff8c6b;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .box{
+    position: relative;
+    width:100%;
+    max-width: 1020px;
+    height:640px;
+    background-color: white;
+    border-radius: 3.3rem;
+    box-shadow: 0 60px 40px -30px rgba(0,0,0, 0.27) ;
+  }
+
+  .inner-box{
+    position: absolute;
+    width: calc(100% - 4.1rem);
+    height: calc(100% - 4.1rem);
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .options-wrap{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left:0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .logo img{
+    width: 80px;
+    margin: 0.3rem;
+  }
+  
+  .logo h2{
+    font-size: 2.5rem;
+    margin-top: -9px;
+    letter-spacing: -0.5px;
+    color: #151111;
+  }
+
+  .sign-in-button {
+    display: inline-block;
+    width: 100%;
+    height: 50px;
+    background-color: #151111;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 0.8rem;
+    font-size: 0.8rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    transition: 0.3s;
+  }
+  
+  .sign-in-button:hover {
+    background-color: #8371fd;
+  }
+
+  .heading h2{
+    font-size: 1.2rem;
+    margin-top: -9px;
+    letter-spacing: -0.5px;
+    color: #151111;
+  }
+
+  .log-out-button {
+    display: inline-block;
+    width: 100%;
+    height: 50px;
+    background-color: #151111;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 0.8rem;
+    font-size: 0.8rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    transition: 0.3s;
+  }
+  
+  .log-out-button:hover {
+    background-color: red;
+  }

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Login</title>
+    <!-- <link rel="stylesheet" href="/Users/Pranjal Singla/PycharmProjects/pythonProject/static/admin.css" /> -->
+    <link rel="stylesheet" href="{{url_for('static', filename = 'admin.css')}}">
+</head>
+
+<body>
+    <main>
+        <div class="box">
+            <div class="inner-box">
+                <div class="carousel">
+                    <div class="logo">
+                        <img src="{{url_for('static', filename ='images for main page/logo.png')}}" alt="logo">
+                        <!-- <img src="/Users/Pranjal Singla/PycharmProjects/pythonProject/static/images for main page/logo.png" alt="logo"> -->
+                        <h2>DebSort</h2>
+                    </div>
+                    <div class="text-slider">
+                        <div class="text-wrap">
+                            <div class="text-group">
+                                <h2>Adjudicators</h2>
+                                <h2>Institutions</h2>
+                                <h2>Teams</h2>
+                                <h2>Speakers</h2>
+                                <h2>Users</h2>
+                            </div>
+                        </div>
+
+                        <div class="bullets">
+                            <span class="active" data-value="1"></span>
+                            <span data-value="2"></span>
+                            <span data-value="3"></span>
+                            <span data-value="4"></span>
+                            <span data-value="5"></span>
+                        </div>
+                    </div>
+                    <div class="forms-wrapper">
+                        <form action="/admin" class="forms cat-1 show" method="POST">
+                            <input type="submit" value="Add Adjudicators" name="choice" class="sign-in-button">
+                            <input type="submit" value="Edit Adjudicators" name="choice" class="sign-in-button">
+                            <input type="submit" value="Remove Adjudicators" name="choice" class="sign-in-button">
+                            <input type="submit" value="View Adjudicators" name="choice" class="sign-in-button">
+                            <input type="submit" value="Log Out" name="choice" class="sign-in-button">
+                            <div class="heading">
+                                <h6>
+                                    {% if message %}
+                                    <div class="alert">{{message}}</div>
+                                    {% endif %}
+                                </h6>
+                            </div>
+                        </form>
+                        <form action="/admin" class="forms cat-2" method="POST">
+                            <input type="submit" value="Add Institutions" name="choice" class="sign-in-button">
+                            <input type="submit" value="Edit Institutions" name="choice" class="sign-in-button">
+                            <input type="submit" value="Remove Institutions" name="choice" class="sign-in-button">
+                            <input type="submit" value="View Institutions" name="choice" class="sign-in-button">
+                            <input type="submit" value="Log Out" name="choice" class="sign-in-button">
+                            <div class="heading">
+                                <h6>
+                                    {% if message %}
+                                    <div class="alert">{{message}}</div>
+                                    {% endif %}
+                                </h6>
+                            </div>
+                        </form>
+                        <form action="/admin" class="forms cat-3" method="POST">
+                            <input type="submit" value="Add Teams" name="choice" class="sign-in-button">
+                            <input type="submit" value="Edit Teams" name="choice" class="sign-in-button">
+                            <input type="submit" value="Remove Teams" name="choice" class="sign-in-button">
+                            <input type="submit" value="View Teams" name="choice" class="sign-in-button">
+                            <input type="submit" value="Log Out" name="choice" class="sign-in-button">
+                            <div class="heading">
+                                <h6>
+                                    {% if message %}
+                                    <div class="alert">{{message}}</div>
+                                    {% endif %}
+                                </h6>
+                            </div>
+                        </form>
+                        <form action="/admin" class="forms cat-4" method="POST">
+                            <input type="submit" value="Add Speakers" name="choice" class="sign-in-button">
+                            <input type="submit" value="Edit Speakers" name="choice" class="sign-in-button">
+                            <input type="submit" value="Remove Speakers" name="choice" class="sign-in-button">
+                            <input type="submit" value="View Speakers" name="choice" class="sign-in-button">
+                            <input type="submit" value="Log Out" name="choice" class="sign-in-button">
+                            <div class="heading">
+                                <h6>
+                                    {% if message %}
+                                    <div class="alert">{{message}}</div>
+                                    {% endif %}
+                                </h6>
+                            </div>
+                        </form>
+                        <form action="/admin" class="forms cat-5" method="POST">
+                            <input type="submit" value="Add Users" name="choice" class="sign-in-button">
+                            <input type="submit" value="Edit Users" name="choice" class="sign-in-button">
+                            <input type="submit" value="Remove Users" name="choice" class="sign-in-button">
+                            <input type="submit" value="View Users" name="choice" class="sign-in-button">
+                            <input type="submit" value="Log Out" name="choice" class="sign-in-button">
+                            <div class="heading">
+                                <h6>
+                                    {% if message %}
+                                    <div class="alert">{{message}}</div>
+                                    {% endif %}
+                                </h6>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Javascript file -->
+    <script src="{{url_for('static', filename = '/javascript/app.js')}}"></script>
+    <script src="/Users/Pranjal Singla/PycharmProjects/pythonProject/static/javascript/app.js"></script>
+</body>
+
+</html>

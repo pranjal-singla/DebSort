@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Edit Adjudicator</title>
+	<!-- <link rel="stylesheet" href="/Users/Pranjal Singla/PycharmProjects/pythonProject/static/remove_styles.css"> -->
+	<link rel="stylesheet" href="{{url_for('static', filename='remove_styles.css')}}">
+</head>
+<body>
+	<main>
+		<div class="box">
+			<div class="inner-box">
+				<div class="forms-wrap">
+					<form action="/edit_adjudicator"  method="POST">
+						<div class="logo">
+						  <!-- <img src="/Users/Pranjal Singla/PycharmProjects/pythonProject/static/images for main page/logo.png" alt="logo" /> -->
+							<img src="{{url_for('static', filename='images for main page/logo.png')}}" alt="logo" />
+						  <h4>DebSort</h4>
+						</div>
+						<div class="heading">
+						  <h2>Edit Adjudicator</h2>
+						</div>
+		  
+						<div class="actual-form">
+							<div class="input-wrap">
+								<label class="radio-container">
+									<input name="type" type="radio" value="name" class="radio"> Name
+									<span class="checkmark"></span>
+								</label>
+								<label class="radio-container">
+									<input name="type" type="radio" value="base_score" class="radio"> Base Score
+									<span class="checkmark"></span>
+								</label>					
+								<label class="radio-container">
+									<input name="type" type="radio" value="institution" class="radio"> Institution
+									<span class="checkmark"></span>
+								</label>					
+								<label class="radio-container">
+									<input name="type" type="radio" value="email" class="radio"> Email
+									<span class="checkmark"></span>
+								</label>					
+								<label class="radio-container">
+									<input name="type" type="radio" value="gender" class="radio"> Gender
+									<span class="checkmark"></span>
+								</label>					
+								<label class="radio-container">
+									<input name="type" type="radio" value="core" class="radio"> Core
+									<span class="checkmark"></span>
+								</label>					
+							</div>
+						  <div class="input-wrap">
+							<input type="number" name="username" placeholder="Name" class="textbox">
+						  </div>
+						  <div class="input-wrap">
+							<input type="text" name="password" placeholder="Change" class="textbox">
+						  </div>
+						  <input type="submit" value="SUBMIT" class="submit"/>
+						</div>
+                        <div class="heading">
+                            <h6>
+                                {% if message %}
+                                <div class="alert">{{message}}</div>
+                                {% endif %}
+                            </h6>
+                        </div>
+					  </form>
+				</div>
+			</div>
+		</div>
+	</main>
+</body>
+</html> 

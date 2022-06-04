@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Login Page</title>
+	<!-- <link rel="stylesheet" href="/Users/Pranjal Singla/PycharmProjects/pythonProject/static/main_style.css"> -->
+	<link rel="stylesheet" href="{{url_for('static', filename='main_style.css')}}">
+</head>
+<body>
+	<main>
+		<div class="box">
+			<div class="inner-box">
+				<div class="forms-wrap">
+					<form action="/"  method="POST" autocomplete="off">
+						<div class="logo">
+						  <!-- <img src="/Users/Pranjal Singla/PycharmProjects/pythonProject/static/images for main page/logo.png" alt="logo" /> -->
+						  	<!-- <link rel="stylesheet" href="{{url_for('static', filename='/main_style.css')}}"> -->
+							<img src="{{url_for('static', filename='images for main page/logo.png')}}" alt="logo" />
+						  <h4>DebSort</h4>
+						</div>
+						<div class="heading">
+						  <h2>Log In</h2>
+						</div>
+		  
+						<div class="actual-form">
+							<div class="input-wrap">
+								<label class="radio-container">
+									<input name="type" type="radio" value="admin" class="radio"> Admin
+									<span class="checkmark"></span>
+								</label>
+								<label class="radio-container">
+									<input name="type" type="radio" value="participant" class="radio"> Participant
+									<span class="checkmark"></span>
+								</label>					
+							</div>
+						  <div class="input-wrap">
+							<input type="text" name="username" placeholder="Username" class="textbox">
+						  </div>
+						  <div class="input-wrap">
+							<input type="password" name="password" placeholder="Password" class="textbox">
+						  </div>
+						  <input type="submit" value="Sign In" class="submit" />
+						</div>
+						<div class="heading">
+                            <h6>
+                                {% if message %}
+                                <div class="alert">{{message}}</div>
+                                {% endif %}
+                            </h6>
+                        </div>
+					  </form>
+				</div>
+				<div class="carousel">
+					<!-- <img src="/Users/Pranjal Singla/PycharmProjects/pythonProject/static/images for main page/image1.png" alt="background" /> -->
+					<img src="{{url_for('static', filename='images for main page/image1.png')}}" alt="background" />
+				</div>
+			</div>
+		</div>
+	</main>
+</body>
+</html> 
