@@ -1,7 +1,8 @@
 # DebSort
 
-<img src='images/login.png' alt="1"></img>
-<img src='images/edit.png' alt="2"></img>
+<img src='images/logo.jpeg' alt="1"></img>
+<img src='images/edit.jpeg' alt="2"></img>
+<img src='images/edit_team.jpeg' alt="2"></img>
 
 ## 📓 Problem Statement
 - With more than 100 colleges and more than 500 speakers and adjudicators, it becomes difficult to organize a debating tournament.
